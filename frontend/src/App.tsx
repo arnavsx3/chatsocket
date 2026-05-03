@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { connectWs } from "./ws";
+import { getSocket } from "./lib/socket"; 
 
-const socket = connectWs();
+const socket = getSocket();
 
 export default function App() {
   const [message, setMessage] = useState("");
